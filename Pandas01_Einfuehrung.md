@@ -269,7 +269,36 @@ Die Ausgabe des Dataframe soll so aussehen:
 
 ### Pandas Aufgaben
 
+```python
+import numpy as np
+import numpy as pd
 
+df = pd.read_csv("data/Temperature/GlobalLandTemperaturesByMajorCity.csv.bz2")
+
+df.head()
+```
+
+- Aufgabe1:<br>
+  Wie viele Datensätze gibt es aus Spanien("Spain")?
+- Aufgabe2:<br>
+  Erstelle eine Variable **df_germany** mit einem DataFrame, welches nur die Einträge aus Deutschland enthält. Diese wirst du auch später nochmals benötigen.
+
+  Was ist die niedrigste Temperatur, die nach den Daten in Deutschland gemessen wurde? Was ist die höchste Temperatur, die nach den Daten in Deutschland gemessen wurde?
+- Aufgabe3:<br>
+  Für welches Land wurde eine höhere Temperatur ("AverageTemperature") gemessen: Deutschland("Germany") oder Frankreich("France")? Du kannst auch einfach nur die Maximaltemperatur der Messwerte jeweils für Deutschland bzw. Frankreich ausgeben.
+- Aufgabe4:<br>
+  Wie oft gab es in Berlin "ungemütliches" Wetter? Ungemütlich soll hier heißen, dass es entweder kälter als -9 Grad-Celsius war, oder wärmer als 22 Grad-Celsius.
+
+  Bitte beachte:
+  - Du darfst hierbei vom **df_germany** aus starten (siehe Aufgabe2)
+  - Schreibe, wenn möglich, nur eine Zeile Code!
+- Aufgabe5:<br>
+  Was ist die tiefste Temperatur, die jemals in China gemessen wurde?
+
+  Hinweis:
+  - Schreibe hierzu nur eine Zeile Code!
+  - Filtere die Daten gleichzeitig nach dem Land ("China") und extrahiere die Spalte "AverageTemperature" aus den Daten
+  - Tipp: Hier benötigst du die **.loc**-Schreibweise
 
 ## Merkblätter
 
