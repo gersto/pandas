@@ -38,9 +38,79 @@ Nan:
 ```python
 x = float("nan")
 
+print(x)
 print(x + 5)
+# mit nan kann man nicht so einfach vergleichen - man braucht eigene Funktionen
 print(x == x)
 
 # nan
+# nan
 # False
 ```
+
+Auf nan-Wert prüfen
+```python
+import math
+
+print(math.isnan(x))
+
+# True
+```
+
+Löschen von NaN-Werten
+```python
+len(df)
+# 239177
+
+df = df[~pd.isna(df["AverageTemperature"])]
+len(df)
+# 228175
+```
+
+Um alle NaN-Werte zu entfernen
+```python
+df.dropna()
+```
+
+### Strings verarbeiten
+
+Pandas-Series unterstützen den + Operator
+```python
+# City und Country zusammenführen
+df["City"] + ", " + df["Country"]
+mit zurückschreiben
+df["City"] = df["City"] + ", " + df["Country"]
+```
+
+Eine Spalte löschen
+```python
+df = df.drop(["Conutry"], axis=1)
+# df.drop(["Conutry"], axis=1, inplace=True)
+```
+
+Aufteilen eines Spalteninhalts in mehrere Spalten (str-Funktion auf eine Series)
+```python
+#df["City"].str.replace(",", ",,,")
+df["City"].str.split(",", 1)  # es entsteht eine Series mit Listenelementen - müsste mit der map-Funktion weiter bearbeitet werden --> eleganter die expand-Option
+
+#0         [Abidjan,  Côte D'Ivoire]
+#1         [Abidjan,  Côte D'Ivoire]
+#2         [Abidjan,  Côte D'Ivoire]
+```
+```python
+df["City"].str.split(",", 1, expand=True)
+
+#       	0 	            1
+#0 	Abidjan 	Côte D'Ivoire
+#1 	Abidjan 	Côte D'Ivoire
+#2 	Abidjan 	Côte D'Ivoire
+```
+
+```python
+df_city = df["City"].str.split(",", 1, expand=True)
+
+# auf numerische Spaltennamen zugreifen
+df["City"] = df_city[0]
+df["Country"] = df_city[1]
+```
+
