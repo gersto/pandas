@@ -114,3 +114,86 @@ df["City"] = df_city[0]
 df["Country"] = df_city[1]
 ```
 
+### Datentypen umwandeln
+
+z.B. den Längengrad (z.B. 3.23W) in eine Kommazahl umwandeln
+
+```python
+df["Longitude"].astype("float")
+# ValueError --> da im String noch der Buchstabe (W,...) steht
+```
+```python
+"3.23W"[:-1]
+# '3.23'
+df["LongitudeDir"] = df["Longitude"].str[-1]
+```
+
+```python
+df["Longitude"] = df["Longitude"].str[:-1].astype("float")
+```
+
+```python
+df.loc[df["LongitudeDir"] == "W", "Longitude"] = df["Longitude"] * -1
+# eventuell die LongitudeDir-Spalte wieder entfernen
+df.drop(["LongitudeDir"], axis=1, inplace=True)
+```
+
+Lösung ohne eigene Spalte (über eine eigene Variable)
+```python
+longitudeDir = df["Longitude"].str[-1]
+df["Longitude"] = df["Longitude"].str[:-1].astype("float")
+df.loc[longitudeDir == "W", "Longitude"] = df["Longitude"] * -1
+```
+
+### Zeitreihen abfragen
+
+z.B. Frage: War es im Jahr 2012 im Schnitt wärmer als im Jahr 2010?, und um wieviel war es dann wärmer
+
+```python
+df["dt"]
+# liefert die Datensätze als string (object)
+
+pd.to_datetime("2019-05-05")
+# Timestamp('2019-05-05 00:00:00')
+pd.to_datetime("05.06.2021", format="%d.%m.%Y")
+```
+
+```python
+df["dt"] = pd.to_datetime(df["dt"])
+```
+
+Es gibt noch die **dt-Funktion**
+```python
+df["dt"].dt.year
+df["dt"].dt.month
+```
+
+```python
+df.loc[df["dt"].dt.year == 2012, "AverageTemperatur"]
+df.loc[df["dt"].dt.year == 2012, "AverageTemperatur"].mean()
+# 19.66823916666667
+```
+
+```python
+print(df.loc[df["dt"].dt.year == 2010, "AverageTemperatur"].mean())
+print(df.loc[df["dt"].dt.year == 2012, "AverageTemperatur"].mean())
+```
+
+### Daten sortieren
+
+z.B. nach der durchschnittlichen Temperatur aufsteigend sortieren
+```python
+df.sort_values(by=["AverageTemperature"])
+df.sort_values?
+# inplace, ascending, ...
+# auch nach mehreren Spalten sortieren
+```
+
+```python
+df.sort_values(by=["AverageTemperature"])
+df.sort_values?
+```
+
+### Daten gruppieren
+
+
