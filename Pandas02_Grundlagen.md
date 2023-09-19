@@ -189,11 +189,35 @@ df.sort_values?
 # auch nach mehreren Spalten sortieren
 ```
 
+### Daten gruppieren
+
+
+## Aufgaben
+
+### Aufgabe1
+
+In Äquatornähe ist es tendenziell wärmer als weiter nördlich bzw. weiter südlich.
+
+- Was ist die durchschnittliche "AverageTemperature" für alle Messwerte zwischen einem Breitengrad ("Latitude") von -10 und 10 Grad?
+- Und was ist die durchschnittliche "AverageTemperature" für alle Messwerte außerhalb dieses Bereiches?
+
+Hinweis: Beantworte beide Fragen mit jeweils nur einer (wenn auch komplexen) Zeile Python-Code. Ggf wirst du hierfür die .loc-Schreibweise benötigen.
+
+### Aufgabe2
+
+In welchem Land wurde im Schnitt die höchste "AverageTemperature" gemessen?
+
+### Aufgabe3
+
+Filtere die Daten (in einer neuen Variable), sodass nur noch die Jahre 1990-2012 (bis zum 31.12.2012) betrachtet werden.
+
+Erstelle anschließend eine Auflistung, bei der für jedes Jahr der Durchschnittswert der Spalte "AverageTemperature" berechnet wird! Welches dieser Jahre war das wärmste Jahr?
+
+**Hinweis**: Du kannst Datumswerte einfach miteinander vergleichen. Dies funktioniert auch, wenn auf der rechten bzw. auf der linken Seite eine Series steht, hier in diesem Beispiel wird also dann True ausgegeben:
 ```python
-df.sort_values(by=["AverageTemperature"])
-df.sort_values?
+print(pd.to_datetime("1990-01-01") < pd.to_datetime("1995-01-01"))
 ```
 
-### Daten gruppieren
+
 
 
