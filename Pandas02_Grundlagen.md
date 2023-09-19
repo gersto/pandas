@@ -191,6 +191,25 @@ df.sort_values?
 
 ### Daten gruppieren
 
+z.B. Durchschnittswerte pro Jahr für alle Jahre
+
+```python
+import numpy as np
+# df.groupby(by=["dt"])  ' dem Befehl fehlt noch was
+df.groupby(by=["dt"]).agg(avgTmp=("AverageTemperature", np.mean))  # jetzt für jeden Tag gruppiert
+```
+
+```python
+df["dtYear"] = df["dt"].dt.year
+df.groupby(by=["dtYear"]).agg(avgTmp=("AverageTemperature", np.mean))
+```
+
+```python
+df["dtYear"] = df["dt"].dt.year
+res = df.groupby(by=["dtYear"]).agg(avgTmp=("AverageTemperature", np.mean))
+
+res.loc[1980:2014, "avgTmp"]
+```
 
 ## Aufgaben
 
