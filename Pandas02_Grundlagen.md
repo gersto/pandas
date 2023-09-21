@@ -252,6 +252,13 @@ Erstelle anschließend eine Auflistung, bei der für jedes Jahr der Durchschnitt
 print(pd.to_datetime("1990-01-01") < pd.to_datetime("1995-01-01"))
 ```
 
+## Merkblätter
+
+- [Merkblatt_NaN](pdfs/Merkblatt_NaN.pdf)
+- [Merkblatt_Sortieren_und_Gruppieren](pdfs/Merkblatt_Sortieren_und_Gruppieren.pdf)
+- [Merkblatt_Strings_in_Dataframes](pdfs/Merkblatt_Strings_in_Dataframes.pdf)
+- [Merkblatt_Timestamp_in_Dataframes](pdfs/Merkblatt_Timestamp_in_Dataframes.pdf)
+
 
 
 
