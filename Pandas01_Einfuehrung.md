@@ -146,7 +146,7 @@ df.loc[0]
 
 Auf einzelne Werte
 ```python
-df.loc[0].["AverageTemperature"]
+df.loc[0]["AverageTemperature"]
 ```
 
 In ein Python-Dictionary umwandeln
