@@ -105,7 +105,7 @@ auf diese Series kann man jetzt verschiedene Berechnungen durchführen, z.B. mea
 ```python
 print(df["AverageTemperature"].min())
 print(df["AverageTemperature"].max())
-print(df["AverageTemperature"].max())
+print(df["AverageTemperature"].avg())
 print(df["AverageTemperature"].sum())
 # -26.772
 # 38.283
