@@ -271,7 +271,7 @@ Die Ausgabe des Dataframe soll so aussehen:
 
 ```python
 import numpy as np
-import numpy as pd
+import pandas as pd
 
 df = pd.read_csv("data/Temperature/GlobalLandTemperaturesByMajorCity.csv.bz2")
 
