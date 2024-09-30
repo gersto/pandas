@@ -60,7 +60,7 @@ df["City"]
 #2         Abidjan
 #3         Abidjan
 #4         Abidjan
-           ...   
+#           ...   
 #239172       Xian
 #239173       Xian
 #239174       Xian
