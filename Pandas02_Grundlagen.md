@@ -84,8 +84,8 @@ df["City"] = df["City"] + ", " + df["Country"]
 
 Eine Spalte löschen
 ```python
-df = df.drop(["Conutry"], axis=1)
-# df.drop(["Conutry"], axis=1, inplace=True)
+df = df.drop(["Country"], axis=1)
+# df.drop(["Country"], axis=1, inplace=True)
 ```
 
 Aufteilen eines Spalteninhalts in mehrere Spalten (str-Funktion auf eine Series)
