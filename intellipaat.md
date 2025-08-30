@@ -13,3 +13,10 @@ Data:
 - [https://www.kaggle.com/datasets/raminhuseyn/hr-analytics-data-set?resource=download](https://www.kaggle.com/datasets/raminhuseyn/hr-analytics-data-set?resource=download)
 - [https://www.kaggle.com/datasets/fahadrehman07/hr-comma-sep-csv](https://www.kaggle.com/datasets/fahadrehman07/hr-comma-sep-csv)
 - [https://www.data.gv.at/home?locale=de](https://www.data.gv.at/home?locale=de)
+
+Notebooks and Data:
+- [Pandas.ipynb](data/Pandas.ipynb)
+- [Matplotlib.ipynb](data/Matplotlib.ipynb)
+- [Seaborn.ipynb](Seaborn.ipynb)
+- [Seaborn2.ipynb](Seaborn2.ipynb)
+- [HR_capstone_dataset.csv](HR_capstone_dataset.csv)
