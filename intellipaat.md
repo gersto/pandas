@@ -3,11 +3,11 @@
 [Youtube-Link](https://www.youtube.com/watch?v=zApoJxbD2bw)
 
 Google-Colab-Notebooks:<br>
-- [part01](colab.research.google.com/drive/1vsANmljtPHhElyS9gOHo1cTsmBkpa9LE)
-- [part02](colab.research.google.com/drive/16648Ht0UDtZCAghebzRifIaJlZUZVVcv)
-- [part03](colab.research.google.com/drive/1q2RZhihG-HxUbcdMN4phr6q4oWNO2ICz)
-- [part04](colab.research.google.com/drive/1V_IvVXcciE3mTfGXOmP-E5mgeu6IE_L5)
-- [part05](colab.research.google.com/drive/1VDgR-4BUgDCXfPZpfXjgop9EwhZ9Id_G)
+- [part01](https://colab.research.google.com/drive/1vsANmljtPHhElyS9gOHo1cTsmBkpa9LE)
+- [part02](https://colab.research.google.com/drive/16648Ht0UDtZCAghebzRifIaJlZUZVVcv)
+- [part03](https://colab.research.google.com/drive/1q2RZhihG-HxUbcdMN4phr6q4oWNO2ICz)
+- [part04](https://colab.research.google.com/drive/1V_IvVXcciE3mTfGXOmP-E5mgeu6IE_L5)
+- [part05](https://colab.research.google.com/drive/1VDgR-4BUgDCXfPZpfXjgop9EwhZ9Id_G)
 
 Data:
 - [https://www.kaggle.com/datasets/raminhuseyn/hr-analytics-data-set?resource=download](https://www.kaggle.com/datasets/raminhuseyn/hr-analytics-data-set?resource=download)
